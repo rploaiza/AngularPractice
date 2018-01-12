@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Server error</h1>
+<div mat-dialog-content>
+    <p>{{data.message}}</p>
+</div>
+<textarea class="detailServer"> {{data.error}}</textarea>
+<div mat-dialog-actions>
+    <button mat-raised-button color="secundary" (click)="closeDialog()">Ok</button>
+</div>

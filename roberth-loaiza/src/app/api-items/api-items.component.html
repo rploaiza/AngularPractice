@@ -1,0 +1,50 @@
+<mat-tab-group class="demo-tab-group">
+    <!--New Item-->
+    <mat-tab label="New Item">
+        <div class="demo-tab-content" id="divNew">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Name" [(ngModel)]="creationItem.name" required/>
+                <mat-error>Field required</mat-error>
+                <button mat-button *ngIf="creationItem.name" matSuffix mat-icon-button aria-label="Clear"
+                        (click)="creationItem.name=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-form-field hintLabel="Max 100 characters">
+            <textarea matInput placeholder="Description" [(ngModel)]="creationItem.description" maxlength="100"
+                      required></textarea>
+                <mat-error>Field required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" (click)="creates()"
+                    [disabled]="creationItem.name === '' || creationItem.description === ''">Save
+            </button>
+
+        </div>
+    </mat-tab>
+    <mat-tab label="Update Item">
+        <!--PUT Item-->
+        <div class="demo-tab-content" id="divUpdate">
+            <mat-form-field>
+                <input matInput type="number" placeholder="Id" [(ngModel)]="updateItem.id">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Name" [(ngModel)]="updateItem.name" required/>
+                <mat-error>Field required</mat-error>
+                <button mat-button *ngIf="updateItem.name" matSuffix mat-icon-button aria-label="Clear"
+                        (click)="updateItem.name=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field hintLabel="Max 100 characters">
+            <textarea matInput placeholder="Description" [(ngModel)]="updateItem.description" maxlength="100"
+                      required></textarea>
+                <mat-error>Field required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" (click)="saves()"
+                    [disabled]="updateItem.name === '' || updateItem.description === ''">Save
+            </button>
+        </div>
+    </mat-tab>
+</mat-tab-group>
+

@@ -1,0 +1,24 @@
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.navbar-brand {
+    padding: 0px;
+    height: 100%;
+}
+
+.navbar-brand > img {
+    height: 100%;
+    width: auto;
+}
+#logoNav {
+    padding-right: 10px;
+    line-height: 50px;
+    font-size: medium;
+    color: #201c9a;
+    padding-left: 10px;
+}

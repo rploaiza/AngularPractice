@@ -1,0 +1,33 @@
+<head>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+</head>
+
+<table class="mdl-data-table mdl-js-data-table table-format">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">Name</th>
+        <th>Description</th>
+        <th>Operation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items">
+        <td class="mdl-data-table__cell--non-numeric">{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>
+            <a (click)="delete(item.id)" title="delete">
+                <mat-icon>delete</mat-icon>
+            </a>
+            <a (click)="read(item.id)" title="preview">
+                <mat-icon>info</mat-icon>
+            </a>
+            <a (click)="prepareUpdate(item.id)" title="edit">
+                <mat-icon>edit</mat-icon>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<p *ngIf="items != undefined && items.length == 0" class="text" colspan="4">No exiten datos.</p>

@@ -1,0 +1,32 @@
+.card {
+    min-width: 200px;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+
+button.mat-primary {
+    background-color: #28c14d
+}
+
+button.mat-secundary {
+    color: #201c9a;
+}
+
+.detailServer {
+    width: 100%;
+}
+
+h4 {
+    text-align: center;
+}
+
+#divNew {
+    padding-left: 35%;
+}
+
+#divUpdate {
+    padding-left: 28%;
+}
